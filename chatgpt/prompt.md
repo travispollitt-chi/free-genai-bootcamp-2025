@@ -25,6 +25,8 @@ The formatted output will generally contain three different parts:
 - the table should only include nouns, verbs, and adjectives.
 - Do not provide particles in the vocabulary table, student needs to figure the correct particles to use.
 - the table of vocab should only have the following columns: Spanish, English
+- Ensure there are no repeats (ex: if poner is repeated twice, show it only once.)
+- If there is more than one version of a word, show the most common example.
 
 ### Sentence Structure
 - do not provide particles in the sentence structure
