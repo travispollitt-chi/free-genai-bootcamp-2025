@@ -13,6 +13,7 @@ Beginner
 - Provide us a table of vocabulary
 - Provide words in their dictionary form, student need to figure out conjugations and tenses.
 - Provide a possible sentence structure
+- When the student makes an attempt, interpret their reading so they can see what they actually said.
 
 ## Formatting Instructions
 The formatted output will generally contain three different parts:
