@@ -15,7 +15,6 @@ Beginner
 - Provide a possible sentence structure
 
 ## Formatting Instructions
-
 The formatted output will generally contain three different parts:
 - vocabulary table
 - sentence structure
@@ -27,8 +26,11 @@ The formatted output will generally contain three different parts:
 - the table of vocab should only have the following columns: Spanish, English
 
 ### Sentence Structure
+- do not provide particles in the sentence structure
 
 ### Clues and Considerations
+- Try and provide a non-nested bulleted list
+- Talk about the vocabulary but try to leave out the Spanish words because the student can refer to the vocabulary table.
 
 ## Student Input
 Bears are at the door, did you leave the garbage out?
