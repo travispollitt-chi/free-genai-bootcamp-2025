@@ -164,6 +164,58 @@ The purpose of this page is to show information about a specific group.
 - GET /api/groups/:id/words
 - GET /api/groups/:id/study_sessions
 
+## Study Sessions Index `/study_sessions`
+
+## Purpose
+The purpose of this page is to show a list of study sessions in our database.
+
+## Components
+- Paginated Study Session List
+    - Columns
+        - Id
+        - Activity Name
+        - Group Name
+        - Start Time
+        - End Time
+        - Number of Review Items
+    - Clicking the study session id will take us to the study session show page.
+
+## Needed API Endpoints
+- GET /api/study_sessions
+
+### Study Session Show `/study_sessions/:id`
+
+## Purpose
+The purpose  of this page it to show information about a specific study session.
+
+## Components
+- Study Session Details
+    - Activity Name
+    - Group Name
+    - Start Time
+    - End Time
+    - Number of Review Items (Paginated List of Words)
+        - Should use the same component as the words index page
+
+## Needed API Endpoints
+- GET /api/study_sessions/:id
+- GET /api/study_sessions/:id/words
+
+## Settings Page `/settings`
+
+## Purpose
+The purpose of this page is to make configurations to the study portal.
+
+## Components
+- Theme Selection eg. Light, Dark, System Default
+- Reset History Button
+    - This will delete all study sessions and word review items
+- Full Reset Button
+    - This will drop all tables and recreate with seed data
+
+## Needed API Endpoints
+- POST /api/reset_history
+- POST /api/full_reset
 
 ----
 ## Purpose
