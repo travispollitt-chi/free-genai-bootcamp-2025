@@ -1,0 +1,6 @@
+CREATE TABLE words (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    spanish TEXT NOT NULL,
+    english TEXT NOT NULL,
+    parts JSON NOT NULL
+);

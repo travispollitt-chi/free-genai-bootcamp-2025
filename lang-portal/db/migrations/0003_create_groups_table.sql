@@ -1,0 +1,5 @@
+CREATE TABLE groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    words_count INTEGER NOT NULL
+);

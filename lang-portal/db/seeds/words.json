@@ -1,0 +1,12 @@
+[
+    {
+        "spanish": "hola",
+        "english": "hello",
+        "parts": ["greeting"]
+    },
+    {
+        "spanish": "adios",
+        "english": "goodbye",
+        "parts": ["farewell"]
+    }
+]

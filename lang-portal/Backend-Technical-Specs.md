@@ -12,9 +12,36 @@ A language learning school wants to build a prototype of learning portal which w
 - The backend will be built using Go
 - The database will be SQLite3
 - The API will be built using GIN
+- Mage is a task runner for Go.
 - The API will always return JSON
 - There will be no authentication or authorization
 - Everything will be treated as a single user
+
+## Directory Structure
+```text
+lang-portal/
+├── cmd/
+│   └── main.go
+├── internal/
+│   ├── handlers/
+│   ├── models/
+│   └── database/
+├── db/
+│   ├── migrations/
+│   │   ├── 0001_create_words_table.sql
+│   │   ├── 0002_create_words_groups_table.sql
+│   │   ├── 0003_create_groups_table.sql
+│   │   ├── 0004_create_study_sessions_table.sql
+│   │   ├── 0005_create_study_activities_table.sql
+│   │   └── 0006_create_word_review_items_table.sql
+│   └── seeds/
+│       └── words.json
+├── pkg/
+│   └── ...
+├── words.db
+├── go.mod
+└── go.sum
+```
 
 ## Database Schema
 
@@ -322,7 +349,7 @@ This task will initialize the SQLite called 'words.db'.
 ### Migrate database
 This task will run a series of migraitons sql files on the database.
 
-Migrations live in the `migrations` folder.
+Migrations live in the `db/migrations` folder.
 The migration files will be run in order of their file name.
 The file names should look like this:
 
@@ -334,7 +361,7 @@ The file names should look like this:
 ### Seed Data
 This task will import json files and transform them into target data for our database.
 
-All seed files live in the 'seeds' folder.
+All seed files live in the 'db/seeds' folder.
 All seed files should be loaded.
 In our task we should have a DSL to specify each seed file and its expected group word name.
 
