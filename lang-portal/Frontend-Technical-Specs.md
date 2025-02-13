@@ -2,13 +2,13 @@
 
 ## Pages
 
-## Dashboard `/dashboard`
+### Dashboard `/dashboard`
 
 ## Purpose
 The purpose of this page is to provide a summary of learning and act as the default page when a user is visiting the web app.
 
 ## Components
-This page contains the following components
+This page contains the following components:
 - Last Study Session
     - shows last activity used
     - shows when last activity used
@@ -21,23 +21,23 @@ This page contains the following components
     - display a mastery of progress e.g. 0%
 
 - Quick Stats
-    - sucess rate eg. 80%
-    - total study sessions eg. 22
-    - total active groups eg. 3
-    - study streak eg. 4 days
+    - success rate e.g. 80%
+    - total study sessions e.g. 22
+    - total active groups e.g. 3
+    - study streak e.g. 4 days
 
 - Start Studying Button
     - goes to study activities 
 
-We'll need following API endpoints to power this page
-- GET /dashboard/last_study_session
-- GET /dashboard/study_progress
-- GET /dashboard/quick stats
+## Needed API Endpoints
+- GET /api/dashboard/last_study_session
+- GET /api/dashboard/study_progress
+- GET /api/dashboard/quick_stats
 
 ### Study Activities `/study-activities`
 
 ## Purpose
-The purpose of this page is to show a collection of study activities with a thumbnail and it's name, to either launch or view the study activity.
+The purpose of this page is to show a collection of study activities with a thumbnail and its name, to either launch or view the study activity.
 
 ## Components
 
@@ -49,8 +49,8 @@ The purpose of this page is to show a collection of study activities with a thum
 
 ## Needed API Endpoints
 
-- GET /study_activities/:id
-- GET /study_activities/:id/study_sessions
+- GET /api/study_activities/:id
+- GET /api/study_activities/:id/study_sessions
 
 ### Study Activity Show `/study_activities/:id`
 
@@ -88,13 +88,13 @@ The purpose of this page is to launch a study activity.
 ## Behavior
 After the form is submitted a new tab opens with the study activity based on its URL provided in the database.
 
-Also after the form is submmitted the page will redirect to the study session showpage.
+Also after the form is submitted the page will redirect to the study session show page.
 
 ## Needed API Endpoints
 - POST /api/study_activities
-    - Required 
+    - Required params: group_id, study_activity_id
 
-## Words `/words`
+### Words `/words`
 
 ## Purpose
 The purpose of this page is to show all words in our database.
@@ -103,7 +103,7 @@ The purpose of this page is to show all words in our database.
 - Paginated Word List
     - Columns
         - Spanish
-        - Englsih
+        - English
         - Correct Count
         - Wrong Count
     - Pagination with 100 items per page
@@ -124,7 +124,7 @@ The purpose of this page is to show information about a specific word.
     - Correct Count
     - Wrong Count
 - Word Groups
-    - Show on a series of pills eg. tags
+    - Show on a series of pills e.g. tags
     - When group name is clicked it will take us to the group show page
 
 ## Needed API Endpoints
@@ -164,7 +164,7 @@ The purpose of this page is to show information about a specific group.
 - GET /api/groups/:id/words
 - GET /api/groups/:id/study_sessions
 
-## Study Sessions Index `/study_sessions`
+### Study Sessions Index `/study_sessions`
 
 ## Purpose
 The purpose of this page is to show a list of study sessions in our database.
@@ -186,7 +186,7 @@ The purpose of this page is to show a list of study sessions in our database.
 ### Study Session Show `/study_sessions/:id`
 
 ## Purpose
-The purpose  of this page it to show information about a specific study session.
+The purpose of this page is to show information about a specific study session.
 
 ## Components
 - Study Session Details
@@ -201,13 +201,13 @@ The purpose  of this page it to show information about a specific study session.
 - GET /api/study_sessions/:id
 - GET /api/study_sessions/:id/words
 
-## Settings Page `/settings`
+### Settings Page `/settings`
 
 ## Purpose
 The purpose of this page is to make configurations to the study portal.
 
 ## Components
-- Theme Selection eg. Light, Dark, System Default
+- Theme Selection e.g. Light, Dark, System Default
 - Reset History Button
     - This will delete all study sessions and word review items
 - Full Reset Button
@@ -216,8 +216,3 @@ The purpose of this page is to make configurations to the study portal.
 ## Needed API Endpoints
 - POST /api/reset_history
 - POST /api/full_reset
-
-----
-## Purpose
-## Components
-## Needed API Endpoints
